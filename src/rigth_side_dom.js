@@ -1,36 +1,34 @@
+/*
+  eslint-disable no-unused-vars, no-alert, no-mixed-operators, import/prefer-default-export
+*/
+
 const rigthSide = (bgImage = null) => {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'rigth-side';
 
-    let wrapper = document.createElement('div')
-    wrapper.className = 'rigth-side'
+  if (bgImage) {
+    wrapper.style.backgroundImage = `url(${bgImage})`;
+    wrapper.style.backgroundPosition = 'center';
+    wrapper.style.backgroundSize = 'cover';
+    wrapper.style.backgroundRepeat = 'no-repeat';
+  } else {
+    const div = document.createElement('div');
+    const h1 = document.createElement('h1');
+    h1.innerText = 'Welcome to Weather Now!!';
+    div.appendChild(h1);
+    const h3 = document.createElement('h3');
+    h3.innerText = 'Search any city and get informed about the weather at the moment';
+    div.appendChild(h3);
 
-    if (bgImage){
-        
-        wrapper.style.backgroundImage = `url(${bgImage})`
-        wrapper.style.backgroundPosition = 'center'
-        wrapper.style.backgroundSize = 'cover'
-        wrapper.style.backgroundRepeat = 'no-repeat'
-        
-    }else {
+    wrapper.appendChild(div);
 
-        let div = document.createElement('div')
-        let h1 = document.createElement('h1')
-        h1.innerText = 'Welcome to Weather Now!!'
-        div.appendChild(h1)
-        let h3 = document.createElement('h3')
-        h3.innerText = 'Search any city and get informed about the weather at the moment'
-        div.appendChild(h3)
+    const image = document.createElement('img');
+    image.src = './images/logo.gif';
+    image.alt = 'logo';
+    wrapper.appendChild(image);
+  }
 
-        wrapper.appendChild(div)
+  return wrapper;
+};
 
-        let image = document.createElement('img')
-        image.src = './images/logo.gif'
-        image.alt = 'logo'
-        wrapper.appendChild(image)
-
-    }
-
-    return wrapper
-
-}
-
-export {rigthSide}
+export { rigthSide };

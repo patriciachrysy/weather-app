@@ -1,3 +1,3 @@
-import {loadDefaultDatas} from './app_logic'
+import { loadDefaultDatas } from './app_logic';
 
 loadDefaultDatas();

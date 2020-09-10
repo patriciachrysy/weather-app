@@ -1,10 +1,13 @@
-const handleForm = (formId) => {
-    let form = document.getElementById(formId);
-    if (form.elements.namedItem('city').value) {
-        return form.elements.namedItem('city').value
-    }else{
-        return null
-    }
-}
+/*
+  eslint-disable no-unused-vars, no-alert, no-mixed-operators, import/prefer-default-export
+*/
 
-export {handleForm}
+const handleForm = (formId) => {
+  const form = document.getElementById(formId);
+  if (form.elements.namedItem('city').value) {
+    return form.elements.namedItem('city').value;
+  }
+  return null;
+};
+
+export { handleForm };
