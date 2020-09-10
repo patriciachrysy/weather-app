@@ -52,7 +52,7 @@ const getWeather = async (city) => {
         celcius: '...',
         farenheit: '...',
       },
-    }
+    };
   }
 
   return weatherData;
@@ -67,7 +67,7 @@ const getGif = async (keyword) => {
     const gif = await resp.json();
     gifUrl = gif.data.images.downsized_large.url;
   } catch (error) {
-    const resp = await fetch(gifApiUrl + '404 not found', {
+    const resp = await fetch(`${gifApiUrl}404 not found`, {
       mode: 'cors',
     });
     const gif = await resp.json();

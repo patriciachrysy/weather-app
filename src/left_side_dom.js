@@ -13,12 +13,12 @@ const leftSide = (data) => {
   tempButtons.className = 'temp-button';
   const celButton = document.createElement('button');
   celButton.id = 'celcius';
-  celButton.className = 'active'
-  celButton.innerText = 'In Celcius'
+  celButton.className = 'active';
+  celButton.innerText = 'In Celcius';
   tempButtons.appendChild(celButton);
   const farButton = document.createElement('button');
   farButton.id = 'farenheit';
-  farButton.innerText = 'In Farenheit'
+  farButton.innerText = 'In Farenheit';
   tempButtons.appendChild(farButton);
   weatherInfos.appendChild(tempButtons);
 
@@ -72,7 +72,7 @@ const leftSide = (data) => {
   like.appendChild(likeTitle);
   const likeVal = document.createElement('span');
   likeVal.innerHTML = `<span id='celcius-temp'>${data.feels_like.celcius} °C</span>
-  <span id='farenheit-temp' class='hide'>${data.feels_like.farenheit} °F</span>`
+  <span id='farenheit-temp' class='hide'>${data.feels_like.farenheit} °F</span>`;
   like.appendChild(likeVal);
   temps.appendChild(like);
   const max = document.createElement('div');
@@ -81,7 +81,7 @@ const leftSide = (data) => {
   max.appendChild(maxTitle);
   const maxVal = document.createElement('span');
   maxVal.innerHTML = `<span id='celcius-temp'>${data.temp_max.celcius} °C</span>
-  <span id='farenheit-temp' class='hide'>${data.temp_max.farenheit} °F</span>`
+  <span id='farenheit-temp' class='hide'>${data.temp_max.farenheit} °F</span>`;
   max.appendChild(maxVal);
   temps.appendChild(max);
   weatherInfos.appendChild(temps);
