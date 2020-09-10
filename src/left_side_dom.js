@@ -12,6 +12,20 @@ const leftSide = (data) => {
 
   const weatherInfos = document.createElement('div');
   weatherInfos.className = 'weather-info';
+
+  const tempButtons = document.createElement('div');
+  tempButtons.className = 'temp-button';
+  const celButton = document.createElement('button');
+  celButton.id = 'celcius';
+  celButton.className = 'active'
+  celButton.innerText = 'In Celcius'
+  tempButtons.appendChild(celButton);
+  const farButton = document.createElement('button');
+  farButton.id = 'farenheit';
+  farButton.innerText = 'In Farenheit'
+  tempButtons.appendChild(farButton);
+  weatherInfos.appendChild(tempButtons);
+
   const city = document.createElement('h2');
   city.innerText = data.cityName;
   weatherInfos.appendChild(city);
@@ -52,7 +66,8 @@ const leftSide = (data) => {
   minTitle.innerText = 'Minimum';
   min.appendChild(minTitle);
   const minVal = document.createElement('span');
-  minVal.innerHTML = `${data.temp_min.celcius} °C <br> ${data.temp_min.farenheit} °F`;
+  minVal.innerHTML = `<span id='celcius-temp'>${data.temp_min.celcius} °C</span>
+  <span id='farenheit-temp' class='hide'>${data.temp_min.farenheit} °F</span>`;
   min.appendChild(minVal);
   temps.appendChild(min);
   const like = document.createElement('div');
@@ -60,7 +75,8 @@ const leftSide = (data) => {
   likeTitle.innerText = 'Feels like';
   like.appendChild(likeTitle);
   const likeVal = document.createElement('span');
-  likeVal.innerHTML = `${data.feels_like.celcius} °C <br> ${data.feels_like.farenheit} °F`;
+  likeVal.innerHTML = `<span id='celcius-temp'>${data.feels_like.celcius} °C</span>
+  <span id='farenheit-temp' class='hide'>${data.feels_like.farenheit} °F</span>`
   like.appendChild(likeVal);
   temps.appendChild(like);
   const max = document.createElement('div');
@@ -68,7 +84,8 @@ const leftSide = (data) => {
   maxTitle.innerText = 'Maximum';
   max.appendChild(maxTitle);
   const maxVal = document.createElement('span');
-  maxVal.innerHTML = `${data.temp_max.celcius} °C <br> ${data.temp_max.farenheit} °F`;
+  maxVal.innerHTML = `<span id='celcius-temp'>${data.temp_max.celcius} °C</span>
+  <span id='farenheit-temp' class='hide'>${data.temp_max.farenheit} °F</span>`
   max.appendChild(maxVal);
   temps.appendChild(max);
   weatherInfos.appendChild(temps);

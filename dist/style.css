@@ -56,7 +56,7 @@ input {
     border-radius: 20px;
 }
 
-input[type=button] {
+input[type=button], .temp-button button:hover {
     background-color: rgb(69, 170, 242);
     color: white;
 }
@@ -70,4 +70,25 @@ input[type=button]:hover {
     color: rgb(69, 170, 242);
 }
 
+.temp-button {
+    display: flex;
+    justify-content: space-around;
+}
 
+.temp-button button {
+    padding: 10px 20px;
+    font-family: inherit;
+    font-size: 20px;
+    background-color: white;
+    border: 2px solid rgb(69, 170, 242);
+    border-radius: 20px;  
+}
+
+.hide {
+    display: none;
+}
+
+.active {
+    background-color: rgb(69, 170, 242) !important;
+    color: white !important;
+}

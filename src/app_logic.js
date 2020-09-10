@@ -23,8 +23,9 @@ const loadDatas = async (city) => {
     container.appendChild(rigth);
 
     listenSearch();
+    listenTempsButtons();
   } catch (error) {
-    alert(error);
+    alert('Sorry, we could not find this city');
   }
 };
 
@@ -40,6 +41,39 @@ const listenSearch = () => {
   });
 };
 
+const listenTempsButtons = () => {
+  const celcius = document.getElementById('celcius')
+  const farenheit = document.getElementById('farenheit')
+  celcius.addEventListener('click', () => {
+    celcius.className = 'active'
+    farenheit.className = ''
+
+    let celSpan = document.querySelectorAll('#celcius-temp')
+    celSpan.forEach(element => {
+      element.className = ''
+    });
+    let farSpan = document.querySelectorAll('#farenheit-temp')
+    farSpan.forEach(element => {
+      element.className = 'hide'
+    });
+  })
+
+
+  farenheit.addEventListener('click', () => {
+    celcius.className = ''
+    farenheit.className = 'active'
+
+    let celSpan = document.querySelectorAll('#celcius-temp')
+    celSpan.forEach(element => {
+      element.className = 'hide'
+    });
+    let farSpan = document.querySelectorAll('#farenheit-temp')
+    farSpan.forEach(element => {
+      element.className = ''
+    });
+  })
+}
+
 const loadDefaultDatas = async () => {
   try {
     const datas = await getDefaultWeather();
@@ -50,6 +84,7 @@ const loadDefaultDatas = async () => {
     container.appendChild(rigth);
 
     listenSearch();
+    listenTempsButtons();
   } catch (error) {
     alert(error);
   }
