@@ -23,7 +23,7 @@ const rigthSide = (bgImage = null) => {
         wrapper.appendChild(div)
 
         let image = document.createElement('img')
-        image.src = './image/logo.gif'
+        image.src = './images/logo.gif'
         image.alt = 'logo'
         wrapper.appendChild(image)
 

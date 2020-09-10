@@ -4,7 +4,7 @@ const leftSide = (data) => {
     let wrapper = document.createElement('div')
     wrapper.className = "left-side"
 
-    wrapper.appendChild(searchForm)
+    wrapper.appendChild(searchForm())
 
     let weatherInfos = document.createElement('div')
     weatherInfos.className = 'weather-info'
@@ -23,10 +23,10 @@ const leftSide = (data) => {
             position.appendChild(lat)
             let long = document.createElement('div')
                 let title = document.createElement('h3')
-                title.innerText = 'Latitude'
-                long.appendChild(h3)
+                title.innerText = 'Longitude'
+                long.appendChild(title)
                 let text = document.createElement('span')
-                text.innerText = data.latitude
+                text.innerText = data.longitude
                 long.appendChild(text)
             position.appendChild(long)
         weatherInfos.appendChild(position)
@@ -48,7 +48,7 @@ const leftSide = (data) => {
         minTitle.innerText = 'Minimum'
         min.appendChild(minTitle)
         let minVal = document.createElement('span')
-        minVal.innerText = data.temp_min
+        minVal.innerHTML = data.temp_min.celcius+' °C <br> '+data.temp_min.farenheit+' °F'
         min.appendChild(minVal)
         temps.appendChild(min)
         let like = document.createElement('div')
@@ -56,15 +56,15 @@ const leftSide = (data) => {
         likeTitle.innerText = 'Feels like'
         like.appendChild(likeTitle)
         let likeVal = document.createElement('span')
-        likeVal.innerText = data.feels_like
-        like.appendChild(minVal)
+        likeVal.innerHTML = data.feels_like.celcius+' °C <br> '+data.feels_like.farenheit+' °F'
+        like.appendChild(likeVal)
         temps.appendChild(like)
         let max = document.createElement('div')
         let maxTitle = document.createElement('h3')
         maxTitle.innerText = 'Maximum'
         max.appendChild(maxTitle)
         let maxVal = document.createElement('span')
-        maxVal.innerText = data.temp_max
+        maxVal.innerHTML = data.temp_max.celcius+' °C <br> '+data.temp_max.farenheit+' °F'
         max.appendChild(maxVal)
         temps.appendChild(max)
         weatherInfos.appendChild(temps)

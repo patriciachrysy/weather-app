@@ -1,6 +1,6 @@
 const searchForm = () => {
     let form = document.createElement('form')
-    form.action = '#'
+    form.id = 'search-form'
 
     let searchInput = document.createElement('input')
     searchInput.type = 'search'
@@ -12,6 +12,7 @@ const searchForm = () => {
     let searchButton = document.createElement('input')
     searchButton.type = 'button'
     searchButton.value = 'Go'
+    searchButton.id = 'search'
     form.appendChild(searchButton)
 
     return form
