@@ -1,7 +1,3 @@
-/*
-  eslint-disable no-unused-vars, no-alert, no-mixed-operators, import/prefer-default-export
-*/
-
 import searchForm from './search_form';
 
 const leftSide = (data) => {
@@ -95,4 +91,4 @@ const leftSide = (data) => {
   return wrapper;
 };
 
-export { leftSide };
+export default leftSide;

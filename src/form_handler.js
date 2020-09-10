@@ -1,7 +1,3 @@
-/*
-  eslint-disable no-unused-vars, no-alert, no-mixed-operators, import/prefer-default-export
-*/
-
 const handleForm = (formId) => {
   const form = document.getElementById(formId);
   if (form.elements.namedItem('city').value) {
@@ -10,4 +6,4 @@ const handleForm = (formId) => {
   return null;
 };
 
-export { handleForm };
+export default handleForm;

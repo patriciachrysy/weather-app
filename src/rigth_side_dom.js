@@ -1,7 +1,3 @@
-/*
-  eslint-disable no-unused-vars, no-alert, no-mixed-operators, import/prefer-default-export
-*/
-
 const rigthSide = (bgImage = null) => {
   const wrapper = document.createElement('div');
   wrapper.className = 'rigth-side';
@@ -31,4 +27,4 @@ const rigthSide = (bgImage = null) => {
   return wrapper;
 };
 
-export { rigthSide };
+export default rigthSide;

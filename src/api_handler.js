@@ -1,6 +1,5 @@
 /*
-  eslint-disable no-unused-vars, no-alert, no-mixed-operators, import/prefer-default-export,
-  no-empty
+  eslint-disable no-unused-vars, no-mixed-operators
 */
 
 const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=';

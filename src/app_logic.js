@@ -1,12 +1,7 @@
-/*
-  eslint-disable no-unused-vars, no-alert, no-mixed-operators, import/prefer-default-export,
-  no-use-before-define
-*/
-
 import { getGif, getWeather, getDefaultWeather } from './api_handler';
-import { leftSide } from './left_side_dom';
-import { rigthSide } from './rigth_side_dom';
-import { handleForm } from './form_handler';
+import leftSide from './left_side_dom';
+import rigthSide from './rigth_side_dom';
+import handleForm from './form_handler';
 
 const container = document.querySelector('.container');
 
@@ -86,8 +81,8 @@ const loadDefaultDatas = async () => {
     listenSearch();
     listenTempsButtons();
   } catch (error) {
-    alert(error);
+    alert('We could not load the app, check your network');
   }
 };
 
-export { loadDefaultDatas };
+export default loadDefaultDatas;
