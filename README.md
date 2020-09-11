@@ -5,7 +5,7 @@
 
 ![screenshot](./app_screenshot.png)
 
- View the app live [here](https://patriciachrysy.github.io/to-do-list/)
+ View the app live [here](https://patriciachrysy.github.io/weather-app/)
  
 ## Built With
 
@@ -45,7 +45,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/patriciachrysy/to-do-list/issues).
+Feel free to check the [issues page](https://github.com/patriciachrysy/weather-app/issues).
 
 ## Show your support
 
